@@ -1,9 +1,14 @@
 import React from 'react'
+import PopularCourse from '../components/PopularCourse'
+import Footer from '../components/Footer'
 
 const Course = () => {
   return (
     <div>
-      course
+      <div className='px-10 pt-10'>
+      <PopularCourse/> 
+      </div>
+      <Footer/>
     </div>
   )
 }
