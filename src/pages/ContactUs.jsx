@@ -1,67 +1,115 @@
 import React from "react";
 import Footer from "../components/Footer.jsx";
 import FAQ from "../components/FAQ.jsx";
+
 const ContactUs = () => {
   return (
     <div className="w-full">
+      {/* Heading */}
       <div className="text-center text-2xl font-bold font-libreBaskerville text-secondary mt-5">
-          <h1 >Contact Us</h1>
-        </div>
-      <div className="w-full flex justify-center items-center mt-10">
-        
-        <form action="" className="md:w-[70%] lg:w-[50%] sm:w-[80%] ">
-          <div className="flex sm:flex-col md:flex-row w-full gap-5 mb-3">
-            <div className="w-[50%]">
-              <label htmlFor="firstName" className="text-ternary font-black font-libreBaskerville">First Name</label>
+        <h1>Contact Us</h1>
+      </div>
+
+      {/* Form Section */}
+      <div className="w-full flex justify-center items-center mt-10 px-5">
+        <form className="w-full max-w-3xl">
+          {/* Name Fields */}
+          <div className="flex flex-col md:flex-row gap-5 mb-5">
+            <div className="flex-1">
+              <label
+                htmlFor="firstName"
+                className="block text-primary font-black font-libreBaskerville mb-2"
+              >
+                First Name
+              </label>
               <input
-                className="w-[100%] border-b border-secondary p-2 text-ternary font-libreBaskerville text-sm font-light  focus:outline-none"
+                className="w-full border-b border-secondary p-2 text-ternary font-libreBaskerville text-sm font-light focus:outline-none"
                 type="text"
-                placeholder="EnterFirst Name"
+                id="firstName"
+                placeholder="Enter First Name"
               />
             </div>
-            <div className="w-[50%]">
-              <label htmlFor="lastName"className="text-primary font-black font-libreBaskerville ">Last Name</label>
+            <div className="flex-1">
+              <label
+                htmlFor="lastName"
+                className="block text-primary font-black font-libreBaskerville mb-2"
+              >
+                Last Name
+              </label>
               <input
-                className="w-[100%] border-b p-2 text-ternary font-libreBaskerville text-sm border-secondary font-light focus:outline-none "
+                className="w-full border-b p-2 text-ternary font-libreBaskerville text-sm border-secondary font-light focus:outline-none"
                 type="text"
+                id="lastName"
                 placeholder="Enter Last Name"
               />
             </div>
           </div>
-          <div className="mb-3">
-            <label htmlFor="Email" className="text-primary font-black font-libreBaskerville">Email</label>
+
+          {/* Email Field */}
+          <div className="mb-5">
+            <label
+              htmlFor="email"
+              className="block text-primary font-black font-libreBaskerville mb-2"
+            >
+              Email
+            </label>
             <input
-              className="w-[100%] border-b p-2 text-ternary border-secondary  font-libreBaskerville text-sm font-light focus:outline-none "
+              className="w-full border-b p-2 text-ternary border-secondary font-libreBaskerville text-sm font-light focus:outline-none"
               type="email"
+              id="email"
               placeholder="Enter Your Email"
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="PhoneNo" className="text-primary font-black font-libreBaskerville">Phone Number</label>
+
+          {/* Phone Number Field */}
+          <div className="mb-5">
+            <label
+              htmlFor="phone"
+              className="block text-primary font-black font-libreBaskerville mb-2"
+            >
+              Phone Number
+            </label>
             <input
-              className="w-[100%] border-secondary  border-b p-2 font-light text-ternary font-libreBaskerville text-sm focus:outline-none"
+              className="w-full border-b p-2 font-light text-ternary font-libreBaskerville text-sm border-secondary focus:outline-none"
               type="text"
+              id="phone"
               placeholder="Enter Phone Number"
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="message" className="text-primary font-black font-libreBaskerville">Message</label>
+
+          {/* Message Field */}
+          <div className="mb-5">
+            <label
+              htmlFor="message"
+              className="block text-primary font-black font-libreBaskerville mb-2"
+            >
+              Message
+            </label>
             <textarea
-              name="message"
               id="message"
               placeholder="Enter the message here..."
-              className="border-b border-secondary text-ternary text-sm font-light resize-none focus:outline-none w-full h-44 font-libreBaskerville"
-            
+              className="w-full border-b border-secondary text-ternary text-sm font-light resize-none focus:outline-none h-44 font-libreBaskerville"
             ></textarea>
           </div>
+
+          {/* Submit Button */}
           <div className="text-right">
-            <input className="text-right border font-libreBaskerville font-bold text-primary px-5 py-2 rounded-full border-secondary hover:bg-secondary hover:border-primary hover:text-white" type="submit" value="Submit" />
+            <button
+              type="submit"
+              className="border font-libreBaskerville font-bold text-primary px-5 py-2 rounded-full border-secondary hover:bg-secondary hover:border-primary hover:text-white transition duration-200"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </div>
-      <div className="px-10">
+
+      {/* FAQ Section */}
+      <div className="px-5 lg:px-10">
         <FAQ />
       </div>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
